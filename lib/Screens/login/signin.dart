@@ -1,10 +1,9 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mobilebankingapp/common/common_auth_Textfield.dart';
+import 'package:mobilebankingapp/common/common_authbutton.dart';
 import 'package:mobilebankingapp/config/appstring.dart';
 import 'package:mobilebankingapp/config/sizebox.dart';
 
@@ -16,6 +15,10 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
+  TextEditingController usernameController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -63,6 +66,13 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
             ),
             const SpaceH61(),
+            CommonAuthTextField(
+                hinttext: 'username', controller: usernameController),
+            CommonAuthTextField(hinttext: 'Email', controller: emailController),
+            CommonAuthTextField(
+                hinttext: 'Password', controller: passwordController),
+            const SpaceH50(),
+            const CommonAuthButton(text: 'Sign Up')
           ],
         ),
       ),
