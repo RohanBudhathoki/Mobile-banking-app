@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:mobilebankingapp/Screens/home/home.dart';
 import 'package:mobilebankingapp/Screens/login/signin.dart';
 
 void main() {
@@ -21,7 +22,7 @@ class _MyAppState extends State<MyApp> {
         designSize: const Size(414, 896),
         builder: (context, child) {
           return const GetMaterialApp(
-            home: SignInScreen(),
+            home: HomeScreen(),
           );
         });
   }

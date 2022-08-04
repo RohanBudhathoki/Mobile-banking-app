@@ -72,7 +72,14 @@ class _SignInScreenState extends State<SignInScreen> {
             CommonAuthTextField(
                 hinttext: 'Password', controller: passwordController),
             const SpaceH50(),
-            const CommonAuthButton(text: 'Sign Up')
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SvgPicture.asset('assets/bottomleftdesign.svg'),
+                const CommonAuthButton(text: 'Sign Up'),
+                Image.asset('assets/botomright.jpg')
+              ],
+            ),
           ],
         ),
       ),
